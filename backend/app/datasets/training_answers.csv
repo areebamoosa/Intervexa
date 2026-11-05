@@ -1,0 +1,41 @@
+answer,label
+Python is a high-level interpreted programming language used to build applications.,Excellent
+A list is an ordered mutable collection that can store multiple values.,Excellent
+Inheritance allows a class to reuse properties and methods from another class.,Excellent
+A function is a reusable block of code that can return a value.,Excellent
+Exception handling uses try and except to handle errors in a program.,Excellent
+HTML gives structure to a webpage using tags and markup.,Excellent
+CSS is used to style the layout and design of a webpage.,Excellent
+JavaScript is a programming language that makes web pages interactive and dynamic in the browser.,Excellent
+The DOM is the document object model that represents html elements as objects.,Excellent
+Responsive design uses a flexible layout so a page works on mobile and other screen sizes.,Excellent
+Python is a high-level programming language.,Good
+A list is an ordered collection of values.,Good
+Inheritance lets a class reuse methods from another class.,Good
+A function is a reusable block of code.,Good
+We use try and except to handle errors.,Good
+HTML uses tags to structure a webpage.,Good
+CSS is used to style a webpage.,Good
+JavaScript makes a webpage interactive in the browser.,Good
+The DOM represents html elements as objects.,Good
+Responsive design helps a layout work on mobile screens.,Good
+Python is a programming language.,Average
+A list stores values.,Average
+Inheritance is about classes.,Average
+A function runs some code.,Average
+Exceptions are errors.,Average
+HTML is for webpages.,Average
+CSS is for design.,Average
+JavaScript runs in the browser.,Average
+The DOM is related to html.,Average
+Responsive design is for mobile.,Average
+I do not know what Python is.,Poor
+I am not sure about lists.,Poor
+I forgot what inheritance means.,Poor
+No idea about functions.,Poor
+I cannot explain exceptions.,Poor
+I do not know HTML.,Poor
+Not sure about CSS.,Poor
+I forgot JavaScript.,Poor
+No idea what the DOM is.,Poor
+I cannot explain responsive design.,Poor

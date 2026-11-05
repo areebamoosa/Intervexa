@@ -1,0 +1,11 @@
+job_role,required_skill,question,expected_answer,keywords,max_score,evaluation_criteria
+Python Developer,Python Basics,What is Python?,Python is a high-level interpreted programming language used to write programs.,"high-level;interpreted;programming language",10,Explains what Python is
+Python Developer,Data Structures,What is a list in Python?,A list is an ordered mutable collection that can store multiple values.,"ordered;mutable;collection",10,Explains Python lists
+Python Developer,OOP,What is inheritance?,Inheritance lets a class reuse the properties and methods of another class.,"class;reuse;properties;methods",10,Explains inheritance
+Python Developer,Functions,What is a function in Python?,A function is a reusable block of code that can take input and return a value.,"reusable;block;code;return",10,Explains functions
+Python Developer,Error Handling,What is exception handling?,Exception handling uses try and except to catch and handle errors in a program.,"try;except;error;handle",10,Explains exception handling
+Frontend Developer,HTML,What is HTML?,HTML is a markup language that gives structure to a webpage using tags.,"structure;webpage;tags;markup",10,Explains HTML
+Frontend Developer,CSS,What is CSS?,CSS is used to style the layout and design of a webpage.,"style;layout;design;webpage",10,Explains CSS
+Frontend Developer,JavaScript,What is JavaScript?,JavaScript is a programming language that makes web pages interactive and dynamic in the browser.,"interactive;browser;programming;dynamic",10,Explains JavaScript
+Frontend Developer,DOM,What is the DOM?,The DOM is the Document Object Model. It represents HTML elements as objects the browser can change.,"document;object;model;html",10,Explains the DOM
+Frontend Developer,Responsive Design,What is responsive design?,Responsive design uses a flexible layout so a page works on mobile phones and other screen sizes.,"screen;mobile;flexible;layout",10,Explains responsive design
