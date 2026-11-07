@@ -1,68 +1,63 @@
+import csv
 from pathlib import Path
 
-import joblib
-import numpy as np
 from fastapi import HTTPException
 
-from app.data import questions_df
+from app.ml.model import predict_label
 
-MODEL_FILE = Path(__file__).resolve().parent.parent / "models" / "answer_model.pkl"
-answer_model = joblib.load(MODEL_FILE)
+QUESTIONS_FILE = Path(__file__).resolve().parent.parent / "datasets" / "interview_questions.csv"
 
-submissions = []
+with QUESTIONS_FILE.open(newline="") as file:
+    questions = list(csv.DictReader(file))
 
 
 def get_roles():
-    roles = questions_df["job_role"].unique().tolist()
+    roles = []
+    for row in questions:
+        if row["job_role"] not in roles:
+            roles.append(row["job_role"])
     return {"roles": roles}
 
 
-def get_questions(job_role: str):
-    rows = questions_df[questions_df["job_role"] == job_role]
-
-    if rows.empty:
+def get_questions(job_role):
+    rows = [row for row in questions if row["job_role"] == job_role]
+    if not rows:
         raise HTTPException(status_code=404, detail="Job role not found")
 
-    questions = []
-    for row in rows.to_dict(orient="records"):
-        questions.append({
-            "required_skill": row["required_skill"],
-            "question": row["question"],
-            "max_score": int(row["max_score"]),
-        })
+    return {
+        "job_role": job_role,
+        "questions": [
+            {
+                "required_skill": row["required_skill"],
+                "question": row["question"],
+                "difficulty": row["difficulty"],
+                "max_score": int(row["max_score"]),
+            }
+            for row in rows
+        ],
+    }
 
-    return {"job_role": job_role, "questions": questions}
 
-
-def result_label(percentage):
+def grade(percentage):
     if percentage >= 80:
-        return "Excellent"
+        return "Excellent", "Strong candidate. Recommended for the next round."
     if percentage >= 60:
-        return "Good"
+        return "Good", "Good candidate. Review the weak topics before hiring."
     if percentage >= 40:
-        return "Average"
-    return "Poor"
+        return "Average", "Average candidate. Needs improvement in the missing topics."
+    return "Poor", "Weak candidate. Not recommended for this role right now."
 
 
-def recommendation(percentage):
-    if percentage >= 80:
-        return "Strong candidate. Recommended for the next round."
-    if percentage >= 60:
-        return "Good candidate. Review the weak topics before hiring."
-    if percentage >= 40:
-        return "Average candidate. Needs improvement in the missing topics."
-    return "Weak candidate. Not recommended for this role right now."
+def score_answer(job_role, question_text, answer_text):
+    label = predict_label(answer_text)
 
+    row = None
+    for item in questions:
+        if item["job_role"] == job_role and item["question"] == question_text:
+            row = item
+            break
 
-def score_one_answer(job_role, question_text, answer_text):
-    ml_label = str(answer_model.predict([answer_text])[0])
-
-    rows = questions_df[
-        (questions_df["job_role"] == job_role)
-        & (questions_df["question"] == question_text)
-    ]
-
-    if rows.empty:
+    if row is None:
         return {
             "question": question_text,
             "answer": answer_text,
@@ -71,25 +66,19 @@ def score_one_answer(job_role, question_text, answer_text):
             "max_score": 0,
             "matched_keywords": [],
             "missing_keywords": [],
-            "ml_label": ml_label,
+            "ml_label": label,
         }
 
-    row = rows.iloc[0]
-    keywords = row["keywords"].split(";")
+    keywords = [word.strip().lower() for word in row["keywords"].split(";") if word.strip()]
     answer_lower = answer_text.lower()
-
-    matched = []
-    missing = []
-    for keyword in keywords:
-        keyword = keyword.strip().lower()
-        if keyword in answer_lower:
-            matched.append(keyword)
-        else:
-            missing.append(keyword)
+    matched = [word for word in keywords if word in answer_lower]
+    missing = [word for word in keywords if word not in answer_lower]
 
     max_score = int(row["max_score"])
-    score = (len(matched) / len(keywords)) * max_score
-    score = float(np.round(score, 2))
+    if keywords:
+        score = round((len(matched) / len(keywords)) * max_score, 2)
+    else:
+        score = 0
 
     return {
         "question": question_text,
@@ -99,25 +88,22 @@ def score_one_answer(job_role, question_text, answer_text):
         "max_score": max_score,
         "matched_keywords": matched,
         "missing_keywords": missing,
-        "ml_label": ml_label,
+        "ml_label": label,
     }
 
 
-def build_evaluation(job_role, answers):
+def create_submission(data):
     results = []
-    for item in answers:
-        results.append(score_one_answer(job_role, item.question, item.answer))
+    for item in data.answers:
+        results.append(score_answer(data.job_role, item.question, item.answer))
 
-    scores = np.array([item["score"] for item in results], dtype=float)
-    max_scores = np.array([item["max_score"] for item in results], dtype=float)
+    total_score = round(sum(item["score"] for item in results), 2)
+    max_score = sum(item["max_score"] for item in results)
 
-    total_score = float(np.sum(scores))
-    max_total = float(np.sum(max_scores))
-
-    if max_total == 0:
+    if max_score == 0:
         percentage = 0
     else:
-        percentage = float(np.round((total_score / max_total) * 100, 2))
+        percentage = round((total_score / max_score) * 100, 2)
 
     strengths = []
     weaknesses = []
@@ -130,21 +116,20 @@ def build_evaluation(job_role, answers):
             missing = ", ".join(item["missing_keywords"])
             weaknesses.append(item["required_skill"] + " (missing: " + missing + ")")
 
-    return {
+    label, note = grade(percentage)
+
+    submission = {
+        "candidate_name": data.candidate_name,
+        "candidate_email": data.candidate_email,
+        "job_role": data.job_role,
         "question_results": results,
         "total_score": total_score,
-        "max_score": max_total,
+        "max_score": max_score,
         "percentage": percentage,
-        "result": result_label(percentage),
+        "result": label,
         "strengths": strengths,
         "weaknesses": weaknesses,
-        "recommendation": recommendation(percentage),
+        "recommendation": note,
     }
 
-
-def create_submission(data):
-    saved = data.model_dump()
-    saved["id"] = len(submissions) + 1
-    saved.update(build_evaluation(data.job_role, data.answers))
-    submissions.append(saved)
-    return {"message": "Evaluation complete", "submission": saved}
+    return {"message": "Evaluation complete", "submission": submission}

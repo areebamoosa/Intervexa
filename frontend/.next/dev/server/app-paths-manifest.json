@@ -1,7 +1,0 @@
-{
-  "/candidate/page": "app/candidate/page.js",
-  "/interview/page": "app/interview/page.js",
-  "/page": "app/page.js",
-  "/report/page": "app/report/page.js",
-  "/role/page": "app/role/page.js"
-}

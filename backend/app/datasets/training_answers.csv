@@ -1,41 +1,601 @@
 answer,label
-Python is a high-level interpreted programming language used to build applications.,Excellent
+Python is a high-level interpreted programming language used to write programs.,Excellent
+It involves high-level and interpreted.,Good
+I think this is about python basics.,Average
+I do not know.,Poor
 A list is an ordered mutable collection that can store multiple values.,Excellent
-Inheritance allows a class to reuse properties and methods from another class.,Excellent
-A function is a reusable block of code that can return a value.,Excellent
-Exception handling uses try and except to handle errors in a program.,Excellent
-HTML gives structure to a webpage using tags and markup.,Excellent
+"A key part is ordered, along with mutable.",Good
+This relates to data structures.,Average
+I am not sure about this.,Poor
+A function is a reusable block of code that can take input and return a value.,Excellent
+You would mention reusable and block.,Good
+It has to do with functions.,Average
+I forgot this.,Poor
+Inheritance lets a class reuse the properties and methods of another class.,Excellent
+It involves class and reuse.,Good
+I think this is about oop.,Average
+I cannot explain it.,Poor
+Exception handling uses try and except to catch and handle errors in a program.,Excellent
+"A key part is try, along with except.",Good
+This relates to error handling.,Average
+I do not know.,Poor
+"A list is mutable and a tuple is immutable. Both keep items in order, but a tuple cannot be changed after it is created.",Excellent
+You would mention mutable and immutable.,Good
+It has to do with data structures.,Average
+I am not sure about this.,Poor
+"A decorator is a function that takes another function, wraps it, and returns a new function so extra behavior runs before or after the original call.",Excellent
+It involves function and wraps.,Good
+I think this is about decorators.,Average
+I forgot this.,Poor
+"The GIL is a lock that lets only one thread run Python bytecode at a time. It matters for CPU-bound threads, while I/O-bound work can still overlap.",Excellent
+"A key part is lock, along with thread.",Good
+This relates to concurrency.,Average
+I cannot explain it.,Poor
+"The loop causes many separate queries. Load the related rows in one query, or batch the lookups, instead of querying inside the loop.",Excellent
+You would mention queries and one query.,Good
+It has to do with performance.,Average
+I do not know.,Poor
+"Use a class with __enter__ and __exit__, or the contextmanager decorator. Enter opens the connection and exit closes it, including when an error happens.",Excellent
+It involves enter and exit.,Good
+I think this is about resource management.,Average
+I am not sure about this.,Poor
+HTML is a markup language that gives structure to a webpage using tags.,Excellent
+"A key part is structure, along with webpage.",Good
+This relates to html.,Average
+I forgot this.,Poor
 CSS is used to style the layout and design of a webpage.,Excellent
+You would mention style and layout.,Good
+It has to do with css.,Average
+I cannot explain it.,Poor
 JavaScript is a programming language that makes web pages interactive and dynamic in the browser.,Excellent
-The DOM is the document object model that represents html elements as objects.,Excellent
-Responsive design uses a flexible layout so a page works on mobile and other screen sizes.,Excellent
-Python is a high-level programming language.,Good
-A list is an ordered collection of values.,Good
-Inheritance lets a class reuse methods from another class.,Good
-A function is a reusable block of code.,Good
-We use try and except to handle errors.,Good
-HTML uses tags to structure a webpage.,Good
-CSS is used to style a webpage.,Good
-JavaScript makes a webpage interactive in the browser.,Good
-The DOM represents html elements as objects.,Good
-Responsive design helps a layout work on mobile screens.,Good
-Python is a programming language.,Average
-A list stores values.,Average
-Inheritance is about classes.,Average
-A function runs some code.,Average
-Exceptions are errors.,Average
-HTML is for webpages.,Average
-CSS is for design.,Average
-JavaScript runs in the browser.,Average
-The DOM is related to html.,Average
-Responsive design is for mobile.,Average
-I do not know what Python is.,Poor
-I am not sure about lists.,Poor
-I forgot what inheritance means.,Poor
-No idea about functions.,Poor
-I cannot explain exceptions.,Poor
-I do not know HTML.,Poor
-Not sure about CSS.,Poor
-I forgot JavaScript.,Poor
-No idea what the DOM is.,Poor
-I cannot explain responsive design.,Poor
+It involves interactive and browser.,Good
+I think this is about javascript.,Average
+I do not know.,Poor
+The DOM is the Document Object Model. It represents HTML elements as objects the browser can change.,Excellent
+"A key part is document, along with object.",Good
+This relates to dom.,Average
+I am not sure about this.,Poor
+Responsive design uses a flexible layout so a page works on mobile phones and other screen sizes.,Excellent
+You would mention screen and mobile.,Good
+It has to do with responsive design.,Average
+I forgot this.,Poor
+Use Flexbox for a row or column of items that should share space. Use Grid when the page needs rows and columns together.,Excellent
+It involves row and column.,Good
+I think this is about css layout.,Average
+I cannot explain it.,Poor
+"Give it a button role or use a real button, make it focusable, and handle Enter and Space. Add a visible focus style and an accessible name.",Excellent
+"A key part is button, along with focusable.",Good
+This relates to accessibility.,Average
+I do not know.,Poor
+"Serve a smaller compressed image, use a modern format, and lazy-load images that are below the fold.",Excellent
+You would mention compressed and modern format.,Good
+It has to do with performance.,Average
+I am not sure about this.,Poor
+"Local state belongs to one component. Shared state is kept higher up, or in a store, so several pages can read and update the same data.",Excellent
+It involves one component and shared.,Good
+I think this is about state.,Average
+I forgot this.,Poor
+The key tells React which item is which. A stable key avoids reusing the wrong row and keeps input state attached to the correct item.,Excellent
+"A key part is key, along with which item.",Good
+This relates to rendering.,Average
+I cannot explain it.,Poor
+An API is a defined way for one program to request data or actions from another program.,Excellent
+You would mention request and data.,Good
+It has to do with apis.,Average
+I do not know.,Poor
+A 404 means the server could not find the resource the client asked for.,Excellent
+It involves not find and resource.,Good
+I think this is about http.,Average
+I am not sure about this.,Poor
+"A table stores rows of related data, and each column holds one kind of value.",Excellent
+"A key part is rows, along with column.",Good
+This relates to databases.,Average
+I forgot this.,Poor
+GET reads data and should not change it. POST sends data to create something or run an action.,Excellent
+You would mention reads and should not change.,Good
+It has to do with rest.,Average
+I cannot explain it.,Poor
+Authentication checks who the user is. Authorization checks what that user is allowed to do.,Excellent
+It involves who the user is and allowed to do.,Good
+I think this is about auth.,Average
+I do not know.,Poor
+"A JOIN combines rows from two tables by matching a shared key, such as a user id.",Excellent
+"A key part is combines rows, along with two tables.",Good
+This relates to sql.,Average
+I am not sure about this.,Poor
+The debit and the credit must both succeed or both fail. A transaction keeps the balances correct if one step errors.,Excellent
+You would mention both succeed and both fail.,Good
+It has to do with transactions.,Average
+I forgot this.,Poor
+"Do not cache data that must be fresh, private to one user, or different for every request, because the user could see stale or someone else's data.",Excellent
+It involves fresh and private.,Good
+I think this is about caching.,Average
+I cannot explain it.,Poor
+Repeating the same request should not charge the card twice. A client request id lets the server recognize the retry and return the first result.,Excellent
+"A key part is twice, along with request id.",Good
+This relates to reliability.,Average
+I do not know.,Poor
+"Check slow queries, missing indexes, and whether one instance is saturated. Add capacity only after the bottleneck is clear.",Excellent
+You would mention slow queries and indexes.,Good
+It has to do with scaling.,Average
+I am not sure about this.,Poor
+The frontend is what the user sees in the browser. The backend stores data and applies the business rules.,Excellent
+It involves browser and stores data.,Good
+I think this is about client and server.,Average
+I forgot this.,Poor
+"The browser sends the field values in a request. The server checks them, saves what is valid, and returns a success or an error.",Excellent
+"A key part is request, along with checks.",Good
+This relates to http.,Average
+I cannot explain it.,Poor
+"JSON is a text format for structured data, built from objects, arrays, strings, and numbers.",Excellent
+You would mention text format and objects.,Good
+It has to do with json.,Average
+I do not know.,Poor
+"The form posts the email and password. The server checks them, returns a token or session, and the next page sends that proof with later requests.",Excellent
+It involves password and token.,Good
+I think this is about auth.,Average
+I am not sure about this.,Poor
+The browser applies the same-origin rule. The other server must send CORS headers if that cross-site request is allowed.,Excellent
+"A key part is same-origin, along with cors.",Good
+This relates to cors.,Average
+I forgot this.,Poor
+"Validate in the browser for a fast message, and always validate again on the server because the client can be skipped.",Excellent
+You would mention browser and server.,Good
+It has to do with validation.,Average
+I cannot explain it.,Poor
+"Check that the save request succeeded, that the client replaced its cached copy, and that the next read is not using a stale response.",Excellent
+It involves save request and cached.,Good
+I think this is about data flow.,Average
+I do not know.,Poor
+Check the logged-in user on the server and only update a row that belongs to them. Do not trust an id sent by the browser alone.,Excellent
+"A key part is logged-in, along with belongs to them.",Good
+This relates to security.,Average
+I am not sure about this.,Poor
+"The client treated a weak response as success, or the write was rolled back after the response. Confirm the status code and that the transaction committed.",Excellent
+You would mention status code and rolled back.,Good
+It has to do with consistency.,Average
+I forgot this.,Poor
+"Add the column, update the API to read and write it, then show and edit it in the UI. Deploy the database change before the code that requires it.",Excellent
+It involves column and api.,Good
+I think this is about delivery.,Average
+I cannot explain it.,Poor
+A native app is installed on the phone and can use device features. A mobile website runs in the browser and is opened by a link.,Excellent
+"A key part is installed, along with device features.",Good
+This relates to app basics.,Average
+I do not know.,Poor
+"A screen is one view the user sees, such as a list or a detail page, and the app moves between screens.",Excellent
+You would mention one view and list.,Good
+It has to do with screens.,Average
+I am not sure about this.,Poor
+"The setting stays after the app closes, so the user does not have to choose it again on the next launch.",Excellent
+It involves after the app closes and next launch.,Good
+I think this is about storage.,Average
+I forgot this.,Poor
+A stack keeps the screens the user opened. The back action removes the top screen and returns to the one under it.,Excellent
+"A key part is screens, along with back.",Good
+This relates to navigation.,Average
+I cannot explain it.,Poor
+"The app calls an API, waits for the response, and then updates the screen. It should also show a loading and an error state.",Excellent
+You would mention api and response.,Good
+It has to do with networking.,Average
+I do not know.,Poor
+"Pause work that is not needed, and refresh data that may have changed while the app was in the background.",Excellent
+It involves pause and refresh.,Good
+I think this is about lifecycle.,Average
+I am not sure about this.,Poor
+"Save the note on the device first, mark it as pending, and send it to the server when the network returns. Handle a conflict if the server copy changed.",Excellent
+"A key part is on the device, along with pending.",Good
+This relates to offline.,Average
+I forgot this.,Poor
+"Render only the rows on screen, reuse row views, and avoid heavy work while the user is scrolling.",Excellent
+You would mention rows on screen and reuse.,Good
+It has to do with performance.,Average
+I cannot explain it.,Poor
+"Check the version, signing, permissions, crash-free main flows, and that secrets are not left in the build.",Excellent
+It involves version and signing.,Good
+I think this is about releases.,Average
+I do not know.,Poor
+"It keeps a listener, timer, or image after the user left the screen. Cancel that work when the screen is destroyed.",Excellent
+"A key part is listener, along with timer.",Good
+This relates to memory.,Average
+I am not sure about this.,Poor
+A variable is a name that stores a value the program can read or change later.,Excellent
+You would mention name and stores a value.,Good
+It has to do with programming.,Average
+I forgot this.,Poor
+A commit saves a snapshot of the code with a message that says what changed.,Excellent
+It involves snapshot and message.,Good
+I think this is about git.,Average
+I cannot explain it.,Poor
+A bug is behavior that does not match what the program was supposed to do.,Excellent
+"A key part is does not match, along with supposed to do.",Good
+This relates to bugs.,Average
+I do not know.,Poor
+"Write a function when the same steps are needed in more than one place, so a fix happens once.",Excellent
+You would mention same steps and more than one place.,Good
+It has to do with design.,Average
+I am not sure about this.,Poor
+Read the inputs and print or inspect the value at each step until you find where it changes.,Excellent
+It involves inputs and each step.,Good
+I think this is about debugging.,Average
+I forgot this.,Poor
+"Another person reads the change to catch mistakes, share a simpler approach, and keep the team familiar with the code.",Excellent
+"A key part is catch mistakes, along with simpler.",Good
+This relates to reviews.,Average
+I cannot explain it.,Poor
+"Test zero, negative numbers, and very large numbers, because division by zero fails and the other cases can surprise you.",Excellent
+You would mention zero and negative.,Good
+It has to do with edge cases.,Average
+I do not know.,Poor
+A unit test runs a small piece of code automatically and can be repeated. A manual check is a person trying the feature by hand.,Excellent
+It involves automatically and repeated.,Good
+I think this is about testing.,Average
+I am not sure about this.,Poor
+Not always. Line 40 is where the error was raised. The bad value may have been created earlier and passed in.,Excellent
+"A key part is where the error, along with earlier.",Good
+This relates to errors.,Average
+I forgot this.,Poor
+"Give the field a default for old records, read both shapes if needed, and test a record saved before the change.",Excellent
+You would mention default and old records.,Good
+It has to do with design.,Average
+I cannot explain it.,Poor
+"I check that the change does what it claims, that tests cover the risk, and that names make the code easy to follow.",Excellent
+It involves what it claims and tests.,Good
+I think this is about code review.,Average
+I do not know.,Poor
+"It is the agreed request and response shape. Callers depend on it, so a breaking change needs a plan.",Excellent
+"A key part is request, along with response.",Good
+This relates to apis.,Average
+I am not sure about this.,Poor
+"A tradeoff is choosing one benefit, such as speed of delivery, while accepting a cost, such as a simpler design that may need work later.",Excellent
+You would mention benefit and cost.,Good
+It has to do with tradeoffs.,Average
+I forgot this.,Poor
+"Add a test that fails on the reported case, cover the nearby boundary, and skip tests that only repeat the framework.",Excellent
+It involves fails and boundary.,Good
+I think this is about testing.,Average
+I cannot explain it.,Poor
+"Log the request id, the error, and enough context to find the user action, without writing passwords or tokens.",Excellent
+"A key part is request id, along with error.",Good
+This relates to operations.,Average
+I do not know.,Poor
+"Accept the old and new fields for a while, write both if needed, and remove the old one only after clients have moved.",Excellent
+You would mention old and new and for a while.,Good
+It has to do with compatibility.,Average
+I am not sure about this.,Poor
+"Record the payment, enqueue the email, and make the sender retry safely so a crash does not lose or duplicate the receipt.",Excellent
+It involves enqueue and retry.,Good
+I think this is about design.,Average
+I forgot this.,Poor
+"Confirm the time matches the deploy, roll back if users are harmed, and then find the change that caused it.",Excellent
+"A key part is deploy, along with roll back.",Good
+This relates to incidents.,Average
+I cannot explain it.,Poor
+Compare the user risk of the rewrite with a smaller fix. Choose the path that meets the deadline unless the current code cannot be changed safely.,Excellent
+You would mention user risk and smaller fix.,Good
+It has to do with leadership.,Average
+I do not know.,Poor
+"Add the new shape beside the old one, write to both, backfill old rows, switch readers, and remove the old path after checks pass.",Excellent
+It involves write to both and backfill.,Good
+I think this is about migration.,Average
+I am not sure about this.,Poor
+"A lead sets technical direction, unblocks the team, and keeps the work aligned with the product goal.",Excellent
+"A key part is direction, along with unblocks.",Good
+This relates to role.,Average
+I forgot this.,Poor
+"It is the outcome the team agrees to finish in the sprint, not a loose list of unrelated tasks.",Excellent
+You would mention outcome and agrees to finish.,Good
+It has to do with planning.,Average
+I cannot explain it.,Poor
+"Done means the code is reviewed, tested, and usable in the environment the team agreed on.",Excellent
+It involves reviewed and tested.,Good
+I think this is about quality.,Average
+I do not know.,Poor
+"Write the user outcome, list the smallest slices that deliver it, and call out the risks before committing dates.",Excellent
+"A key part is user outcome, along with smallest slices.",Good
+This relates to roadmap.,Average
+I am not sure about this.,Poor
+"Find the specific blocker, decide who can resolve it, and shrink the task if the unknown is too large.",Excellent
+You would mention blocker and who can resolve.,Good
+It has to do with unblocking.,Average
+I forgot this.,Poor
+"Unknowns in the existing code and unclear requirements show up late. An estimate should name those risks, not pretend to be exact.",Excellent
+It involves unknowns and requirements.,Good
+I think this is about estimates.,Average
+I cannot explain it.,Poor
+"Compare the options against the requirement, time, and operational cost. Decide, write down why, and revisit if new facts appear.",Excellent
+"A key part is options, along with decide.",Good
+This relates to decisions.,Average
+I do not know.,Poor
+Keep the part users need for the release and move the extra cases to a follow-up. Say what is out so the scope is clear.,Excellent
+You would mention users need and follow-up.,Good
+It has to do with delivery.,Average
+I am not sure about this.,Poor
+"Look for clear thinking, honest limits, and evidence they can ship and collaborate, not only a perfect answer to one puzzle.",Excellent
+It involves clear thinking and honest.,Good
+I think this is about hiring.,Average
+I forgot this.,Poor
+"The lead makes sure someone is driving it, users are updated, and a follow-up captures the cause. Ownership is coordination, not doing every task alone.",Excellent
+"A key part is driving it, along with updated.",Good
+This relates to incidents.,Average
+I cannot explain it.,Poor
+"A metric is a number you track to see how something is performing, such as signups per week.",Excellent
+You would mention number and track.,Good
+It has to do with metrics.,Average
+I do not know.,Poor
+SQL is better when the data has many rows or lives in tables you need to filter and join.,Excellent
+It involves many rows and tables.,Good
+I think this is about tools.,Average
+I am not sure about this.,Poor
+"Use a bar chart to compare amounts across categories, such as sales by product.",Excellent
+"A key part is compare, along with categories.",Good
+This relates to charts.,Average
+I forgot this.,Poor
+WHERE filters rows before grouping. HAVING filters groups after an aggregate such as a count.,Excellent
+You would mention before grouping and after.,Good
+It has to do with sql.,Average
+I cannot explain it.,Poor
+A few very large values pull the average up. The median shows the middle value and is less moved by those extremes.,Excellent
+It involves very large and median.,Good
+I think this is about statistics.,Average
+I do not know.,Poor
+"Find what makes a customer unique, keep one trusted row, and record how many duplicates were removed.",Excellent
+"A key part is unique, along with one trusted row.",Good
+This relates to cleaning.,Average
+I am not sure about this.,Poor
+"Group users by the week they joined and by which flow they saw, then compare how many are still active after the same number of days.",Excellent
+You would mention week they joined and which flow.,Good
+It has to do with cohorts.,Average
+I forgot this.,Poor
+"The cheapest users may have left, so the average rose while the total got worse. Check the user count and total revenue, not only the average.",Excellent
+It involves left and total revenue.,Good
+I think this is about bias.,Average
+I cannot explain it.,Poor
+"A fair split, enough users, and a comparison against the old color over the same period. A change at the same time as a sale is not proof.",Excellent
+"A key part is fair split, along with enough users.",Good
+This relates to experiments.,Average
+I do not know.,Poor
+"Ask which decision the number supports. Offer a small set of metrics with definitions, because one number hides the parts they may need to act on.",Excellent
+You would mention which decision and definitions.,Good
+It has to do with decisions.,Average
+I am not sure about this.,Poor
+"The model learns from examples that already have the correct label, then predicts that label for new examples.",Excellent
+It involves examples and correct label.,Good
+I think this is about learning.,Average
+I forgot this.,Poor
+The test set shows how the model does on examples it did not learn from. Training accuracy alone can look better than real use.,Excellent
+"A key part is did not learn, along with training accuracy.",Good
+This relates to data splits.,Average
+I cannot explain it.,Poor
+"A feature is an input value the model uses, such as age or the number of words in a review.",Excellent
+You would mention input value and model uses.,Good
+It has to do with features.,Average
+I do not know.,Poor
+"The model memorizes the training examples, including noise, and then does worse on new data.",Excellent
+It involves memorizes and noise.,Good
+I think this is about overfitting.,Average
+I am not sure about this.,Poor
+A model can predict not fraud every time and still score high if fraud is rare. Precision and recall show the costly mistakes.,Excellent
+"A key part is rare, along with precision.",Good
+This relates to metrics.,Average
+I forgot this.,Poor
+"Loading data, cleaning it, building features, training, and saving the metrics so the same steps can run again.",Excellent
+You would mention cleaning and features.,Good
+It has to do with pipelines.,Average
+I cannot explain it.,Poor
+"Information from the answer, or from the future, gets into the features. The score looks strong but fails on truly new data.",Excellent
+It involves answer and future.,Good
+I think this is about leakage.,Average
+I do not know.,Poor
+"Check whether the live inputs drifted from the training data, and whether the labels or the product changed.",Excellent
+"A key part is drifted, along with labels.",Good
+This relates to monitoring.,Average
+I am not sure about this.,Poor
+"Serve it behind the same input and output contract, compare it with the current model on live traffic, and keep a way to switch back.",Excellent
+You would mention same contract and compare.,Good
+It has to do with serving.,Average
+I forgot this.,Poor
+"If production computes a feature differently, the model sees inputs it was not trained on and the predictions shift.",Excellent
+It involves differently and not trained on.,Good
+I think this is about features.,Average
+I cannot explain it.,Poor
+"An Activity is one screen with a user interface, and the system creates and destroys it as the user moves through the app.",Excellent
+"A key part is one screen, along with creates.",Good
+This relates to basics.,Average
+I do not know.,Poor
+"It describes the views on a screen, such as buttons and text, and how they are arranged.",Excellent
+You would mention views and buttons.,Good
+It has to do with layouts.,Average
+I am not sure about this.,Poor
+"An APK is the package Android installs. It contains the compiled app, resources, and manifest.",Excellent
+It involves package and installs.,Good
+I think this is about builds.,Average
+I forgot this.,Poor
+"It reuses row views as the user scrolls, so a long list does not create a view for every item at once.",Excellent
+"A key part is reuses, along with scrolls.",Good
+This relates to lists.,Average
+I cannot explain it.,Poor
+"An Intent is a message that asks to start a screen or an action, and it can carry a small amount of data.",Excellent
+You would mention message and start a screen.,Good
+It has to do with navigation.,Average
+I do not know.,Poor
+"The screen may be gone when the response arrives, which can update a destroyed UI or waste work.",Excellent
+It involves gone and response.,Good
+I think this is about lifecycle.,Average
+I am not sure about this.,Poor
+The Activity is destroyed and recreated. A ViewModel or another owner can keep the request alive across that change and is easier to test.,Excellent
+"A key part is recreated, along with viewmodel.",Good
+This relates to architecture.,Average
+I forgot this.,Poor
+A large decoded image uses much more memory than the file size. Decode a size close to the view and release images the screen no longer shows.,Excellent
+You would mention decoded and size close to the view.,Good
+It has to do with memory.,Average
+I cannot explain it.,Poor
+"Hand the upload to a background worker that can retry, instead of tying it to the screen the user already left.",Excellent
+It involves background worker and retry.,Good
+I think this is about background.,Average
+I do not know.,Poor
+"Move disk, network, and heavy computation off the main thread. Leave only quick UI updates on it.",Excellent
+"A key part is main thread, along with network.",Good
+This relates to performance.,Average
+I am not sure about this.,Poor
+"A wireframe is a simple layout of a screen that shows structure and content, before visual polish.",Excellent
+You would mention layout and structure.,Good
+It has to do with wireframes.,Average
+I forgot this.,Poor
+"A persona is a short portrait of a target user, based on research, used to guide design choices.",Excellent
+It involves target user and research.,Good
+I think this is about research.,Average
+I cannot explain it.,Poor
+"Low contrast makes text hard to read, especially for people with low vision or on a bright screen.",Excellent
+"A key part is hard to read, along with low vision.",Good
+This relates to visual design.,Average
+I do not know.,Poor
+"You watch a person try to complete a task and note where they hesitate or fail. It tests the design, not the person.",Excellent
+You would mention complete a task and hesitate.,Good
+It has to do with testing.,Average
+I am not sure about this.,Poor
+It is how content is grouped and named so people can find what they need.,Excellent
+It involves grouped and named.,Good
+I think this is about structure.,Average
+I forgot this.,Poor
+"A design system is a shared set of components, colors, and rules so screens stay consistent.",Excellent
+"A key part is components, along with rules.",Good
+This relates to systems.,Average
+I cannot explain it.,Poor
+"Tab through the flow, confirm focus is visible and in a sensible order, and listen to the names and errors a screen reader announces.",Excellent
+You would mention tab and focus.,Good
+It has to do with accessibility.,Average
+I do not know.,Poor
+"Treat it as a design problem, look at what they expected, and change the label, order, or feedback. Then retest that step.",Excellent
+It involves design problem and expected.,Good
+I think this is about research.,Average
+I am not sure about this.,Poor
+"Ask which part is costly and offer a simpler motion that keeps the meaning. Protect the user need, not every visual detail.",Excellent
+"A key part is costly, along with simpler.",Good
+This relates to collaboration.,Average
+I forgot this.,Poor
+"Compare completion rate and time to finish against the old flow, and read where people drop off, not only whether the team likes the look.",Excellent
+You would mention completion rate and time.,Good
+It has to do with measurement.,Average
+I cannot explain it.,Poor
+Cloud servers run in a provider's data center and you rent them. An office server is hardware you buy and maintain.,Excellent
+It involves rent and hardware.,Good
+I think this is about cloud basics.,Average
+I do not know.,Poor
+"A virtual machine is a software computer with its own operating system, running on shared physical hardware.",Excellent
+"A key part is software computer, along with operating system.",Good
+This relates to compute.,Average
+I am not sure about this.,Poor
+A region is a geographic group of data centers. Choosing one affects latency and where data lives.,Excellent
+You would mention geographic and latency.,Good
+It has to do with regions.,Average
+I forgot this.,Poor
+"IAM controls who or what can use a cloud resource, and which actions they can take.",Excellent
+It involves who and resource.,Good
+I think this is about identity.,Average
+I cannot explain it.,Poor
+It spreads incoming traffic across several servers so one server is not overloaded and a failed server can be skipped.,Excellent
+"A key part is spreads, along with several servers.",Good
+This relates to networking.,Average
+I do not know.,Poor
+Use object storage for files such as images and backups that should outlive one server and be read by many clients.,Excellent
+You would mention files and outlive.,Good
+It has to do with storage.,Average
+I am not sure about this.,Poor
+"Put it in a private subnet, allow access only from the app servers, and do not give it a public address.",Excellent
+It involves private subnet and app servers.,Good
+I think this is about networking.,Average
+I forgot this.,Poor
+"The setup is reviewed, repeated, and stored in git, so a new environment matches the last one instead of being clicked together by hand.",Excellent
+"A key part is reviewed, along with repeated.",Good
+This relates to automation.,Average
+I cannot explain it.,Poor
+"Look for new resources left running, larger instance sizes, and data transfer. Stop what is unused and confirm the change that added the rest.",Excellent
+You would mention left running and instance sizes.,Good
+It has to do with cost.,Average
+I do not know.,Poor
+"Run the app in more than one zone, put the load balancer in front, and make sure the data store can fail over without a single zone holding the only copy.",Excellent
+It involves more than one zone and fail over.,Good
+I think this is about resilience.,Average
+I am not sure about this.,Poor
+"A hash lets you check the password without keeping the real one. If the database leaks, the passwords are not sitting there in plain text.",Excellent
+"A key part is check, along with leaks.",Good
+This relates to passwords.,Average
+I forgot this.,Poor
+Phishing is a fake message that tries to trick a person into revealing a password or opening a harmful link.,Excellent
+You would mention fake message and password.,Good
+It has to do with threats.,Average
+I cannot explain it.,Poor
+"A firewall allows or blocks network traffic based on rules, such as which port or address may connect.",Excellent
+It involves allows or blocks and rules.,Good
+I think this is about network.,Average
+I do not know.,Poor
+"Each person or service gets only the access needed for the job, and nothing broader that an attacker could reuse.",Excellent
+"A key part is only the access needed, along with nothing broader.",Good
+This relates to access.,Average
+I am not sure about this.,Poor
+In transit protects data moving over the network. At rest protects data stored on disk.,Excellent
+You would mention moving and network.,Good
+It has to do with encryption.,Average
+I forgot this.,Poor
+It looks for known weaknesses in systems and software so they can be patched before someone uses them.,Excellent
+It involves known weaknesses and patched.,Good
+I think this is about vulnerabilities.,Average
+I cannot explain it.,Poor
+"Isolate the machine from the network, preserve what you need to investigate, and reset the account secrets it could have exposed.",Excellent
+"A key part is isolate, along with preserve.",Good
+This relates to incidents.,Average
+I do not know.,Poor
+"List the assets, who might attack, and the paths they could use, such as stolen passwords or a fake site. Then add controls for the realistic paths.",Excellent
+You would mention assets and paths.,Good
+It has to do with design.,Average
+I am not sure about this.,Poor
+Do not trust a caller only because it is on the company network. Authenticate it and check that it is allowed to call that API.,Excellent
+It involves company network and authenticate.,Good
+I think this is about architecture.,Average
+I forgot this.,Poor
+"Review the design for sensitive data, scan dependencies, and block the release on serious findings instead of only checking after users are affected.",Excellent
+"A key part is sensitive data, along with dependencies.",Good
+This relates to process.,Average
+I cannot explain it.,Poor
+"ETL extracts data from a source, transforms it into a useful shape, and loads it into a destination such as a warehouse.",Excellent
+You would mention extracts and transforms.,Good
+It has to do with pipelines.,Average
+I do not know.,Poor
+A warehouse stores structured data from several systems so people can query and report on it.,Excellent
+It involves structured data and several systems.,Good
+I think this is about warehouses.,Average
+I am not sure about this.,Poor
+"A schema describes the tables and columns, including the type of each column.",Excellent
+"A key part is tables, along with columns.",Good
+This relates to schemas.,Average
+I forgot this.,Poor
+Use a stream when the business needs updates within seconds or minutes. A nightly batch is enough when yesterday's data is fine.,Excellent
+You would mention seconds and minutes.,Good
+It has to do with processing.,Average
+I cannot explain it.,Poor
+"Queries that filter on a day can skip other days, and old partitions can be dropped without rewriting the whole table.",Excellent
+It involves skip and old partitions.,Good
+I think this is about storage.,Average
+I do not know.,Poor
+"It tests data after a load, for example that a key is not null or that today's row count is not suddenly near zero.",Excellent
+"A key part is not null, along with row count.",Good
+This relates to quality.,Average
+I am not sure about this.,Poor
+The next run should be safe to repeat. It should replace or finish today's partial data without duplicating rows that already loaded.,Excellent
+You would mention safe to repeat and partial.,Good
+It has to do with failures.,Average
+I forgot this.,Poor
+"It is a record such as a customer address that changes over time, while reports still need to know the old value that applied in the past.",Excellent
+It involves changes over time and old value.,Good
+I think this is about modeling.,Average
+I cannot explain it.,Poor
+"A lake can store raw files in many formats cheaply. A warehouse stores cleaned, structured tables that are ready to query.",Excellent
+"A key part is raw files, along with cleaned.",Good
+This relates to architecture.,Average
+I do not know.,Poor
+"Recompute the affected dates into a side output, check totals against the source, and then replace those partitions.",Excellent
+You would mention affected dates and check totals.,Good
+It has to do with backfill.,Average
+I am not sure about this.,Poor

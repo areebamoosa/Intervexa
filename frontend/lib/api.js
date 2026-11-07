@@ -1,0 +1,19 @@
+import api from "./axios";
+
+export const GetRoles = async () => {
+  const response = await api.get("/roles");
+  return response.data;
+};
+
+export const GetQuestions = async (jobRole) => {
+  const response = await api.get("/questions", {
+    params: { job_role: jobRole },
+  });
+
+  return response.data;
+};
+
+export const SubmitInterview = async (data) => {
+  const response = await api.post("/submissions", data);
+  return response.data;
+};
