@@ -17,3 +17,11 @@ export const SubmitInterview = async (data) => {
   const response = await api.post("/submissions", data);
   return response.data;
 };
+
+export const DownloadReport = async (reportId) => {
+  const response = await api.get(`/reports/${reportId}/pdf`, {
+    responseType: "blob",
+  });
+
+  return response.data;
+};

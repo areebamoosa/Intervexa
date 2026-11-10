@@ -7,6 +7,7 @@ import StepBar from "@/components/interview/StepBar";
 import AnswerCard from "@/components/report/AnswerCard";
 import ScoreCard from "@/components/report/ScoreCard";
 import Button from "@/components/ui/Button";
+import { DownloadReport } from "@/lib/api";
 
 export default function ReportPage() {
   const router = useRouter();
@@ -18,6 +19,20 @@ export default function ReportPage() {
     setEvaluation(saved ? JSON.parse(saved) : null);
     setReady(true);
   }, []);
+
+  async function downloadPdf() {
+    try {
+      const file = await DownloadReport(evaluation.id);
+      const url = URL.createObjectURL(file);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "intervexa-report.pdf";
+      link.click();
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      alert("Could not download the PDF.");
+    }
+  }
 
   function startOver() {
     sessionStorage.removeItem("intervexa-draft");
@@ -58,7 +73,10 @@ export default function ReportPage() {
           <AnswerCard key={item.question} item={item} />
         ))}
       </div>
-      <div className="mt-8">
+      <div className="mt-8 flex flex-wrap gap-3">
+        <Button type="button" onClick={downloadPdf} disabled={!evaluation.id}>
+          Download PDF
+        </Button>
         <Button type="button" variant="secondary" onClick={startOver}>
           Start a new evaluation
         </Button>

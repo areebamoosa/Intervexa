@@ -3,6 +3,7 @@ from pathlib import Path
 
 from fastapi import HTTPException
 
+from app.db import save_report
 from app.ml.model import predict_label
 
 QUESTIONS_FILE = Path(__file__).resolve().parent.parent / "datasets" / "interview_questions.csv"
@@ -17,7 +18,6 @@ def get_roles():
         if row["job_role"] not in roles:
             roles.append(row["job_role"])
     return {"roles": roles}
-
 
 def get_questions(job_role):
     rows = [row for row in questions if row["job_role"] == job_role]
@@ -131,5 +131,6 @@ def create_submission(data):
         "weaknesses": weaknesses,
         "recommendation": note,
     }
+    submission["id"] = save_report(submission)
 
     return {"message": "Evaluation complete", "submission": submission}
