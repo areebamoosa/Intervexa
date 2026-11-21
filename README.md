@@ -1,61 +1,53 @@
-# 🤖 Intervexa
+# Intervexa
 
 An AI-powered interview evaluation system designed to make candidate assessment smarter and more structured.
 
 ## About the project 🚀
 
-**Intervexa** is an AI-based interview evaluation system built using **Python, FastAPI, and Machine Learning**. It helps interviewers assess candidates based on their technical interview answers and predefined job requirements.
+**Intervexa** is an AI-based interview evaluation system built using **Python, FastAPI, and Machine Learning**. It gives interviewers two separate tools: one that predicts the experience level of a job posting, and one that scores a candidate's written interview answers for a selected job role.
 
-Interviewers can select a job role, enter candidate information, and evaluate responses to role-specific interview questions. The system processes submitted answers using dataset-based evaluation logic and a Machine Learning model to calculate performance scores, identify strengths and knowledge gaps, and generate a structured candidate evaluation report.
+Interviewers can choose one of 15 job roles, enter candidate details, and answer that role's 10 predefined questions. The system scores each answer, labels its quality with a trained ML model, and generates a structured evaluation report that can be saved and downloaded as a PDF.
 
-## ✨ Key Features
+## ⚙️ How It Works
 
-- 💼 **Job role selection:** Select different job roles and access relevant interview questions.
+**📝 Interview evaluation**
 
-- 📝 **Interview questions:** Display predefined technical questions based on the selected job role.
+1. The interviewer enters the candidate's name and email.
+2. The interviewer selects a job role.
+3. Intervexa displays the 10 predefined questions for that role.
+4. The candidate's answers are submitted to the backend.
+5. Each answer is scored by keyword coverage, and the ML model assigns a quality label.
+6. The system calculates the total score, percentage, grade, strengths, and weaknesses.
+7. The report is saved in MySQL and shown on the dashboard, with a PDF download option.
 
-- 👤 **Candidate management:** Enter candidate details before starting an evaluation.
+**💼 Job level check**
 
-- 📊 **Answer evaluation:** Analyze candidate responses against expected answers, important keywords, and evaluation criteria.
-
-- 🤖 **Machine Learning classification:** Classify candidate answers into predefined evaluation categories using a trained ML model.
-
-- 🎯 **Automated scoring:** Calculate individual question scores and an overall performance score.
-
-- 💡 **Strengths & weaknesses analysis:** Identify correctly understood concepts and missing knowledge areas.
-
-- 📑 **Evaluation reports:** Generate structured reports containing scores, answer evaluations, strengths, weaknesses, and recommendations.
-
-
+1. The interviewer pastes a job title and description.
+2. The ML model predicts the experience level, which is shown on screen (not saved).
 
 ## 🛠️ Technologies Used
 
 **Backend & Machine Learning**
+
 - `Python`
 - `FastAPI`
 - `Uvicorn`
 - `Pandas`
-- `NumPy`
 - `Scikit-learn`
+- `Joblib`
+- `fpdf2`
 
 **Frontend**
+
 - `Next.js`
 - `React.js`
 - `Tailwind CSS`
+- `Axios`
 
-**Data & API Documentation**
-- `CSV`
+**Data & Storage**
 
-## ⚙️ How It Works
-
-1. The interviewer selects a job role.
-2. Intervexa displays predefined interview questions for that role.
-3. Candidate information and interview answers are submitted.
-4. The backend processes the answers using the prepared dataset.
-5. Evaluation logic compares responses against expected answers and predefined criteria.
-6. The trained ML model classifies candidate responses into evaluation categories.
-7. The system calculates scores and identifies strengths and knowledge gaps.
-8. A structured evaluation report is generated and displayed on the dashboard.
+- `CSV` (question bank and training datasets)
+- `MySQL` (via PyMySQL)
 
 ## 🚦 Running the Project
 
@@ -87,14 +79,25 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Start the  server:
+Create a `.env` file with your MySQL settings:
+
+```env
+MYSQL_HOST=127.0.0.1
+MYSQL_PORT=3306
+MYSQL_USER=root
+MYSQL_PASSWORD=your_password
+MYSQL_DATABASE=your_db_name
+```
+
+Start the server:
 
 ```bash
 make start
 ```
 
+The API runs at `http://127.0.0.1:8000`. The reports table is created automatically on startup.
 
-**4. Frontend Setup**
+**3. Frontend Setup**
 
 Open another terminal and navigate to the frontend directory:
 
@@ -114,4 +117,4 @@ Start the development server:
 npm run dev
 ```
 
-Open the frontend in your browser at the URL displayed in your terminal.
+Open the frontend in your browser at `http://localhost:4000`. If your API runs on a different address, set `NEXT_PUBLIC_API_URL` accordingly.
