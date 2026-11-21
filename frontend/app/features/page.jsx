@@ -6,47 +6,47 @@ import FeatureCard from "@/components/ui/FeatureCard";
 const features = [
   {
     icon: "list",
-    title: "Role-based questions",
-    text: "Pick a job and Intervexa loads the questions, skills, and marks prepared for that role.",
+    title: "Title and description",
+    text: "A job-level check needs only those two fields.",
   },
   {
     icon: "card",
-    title: "Keyword scoring",
-    text: "Each answer is checked against the skills for that question, then turned into marks out of the question total.",
-  },
-  {
-    icon: "spark",
-    title: "A second read from the model",
-    text: "A trained model adds a label — Excellent, Good, Average, or Poor — next to the keyword score.",
+    title: "Six experience levels",
+    text: "The job model scored 76.36% accuracy on postings it was not trained on.",
   },
   {
     icon: "users",
-    title: "One report for the team",
-    text: "Strengths, missing topics, and a hiring note sit in one place, so reviewers start from the same page.",
+    title: "15 roles, 10 questions",
+    text: "Candidate evaluation uses the questions stored for the role you pick.",
+  },
+  {
+    icon: "spark",
+    title: "Answer score and PDF",
+    text: "Keywords set the marks. The answer model adds Excellent, Good, Average, or Poor.",
   },
 ];
 
 const whyItems = [
   {
     icon: "clock",
-    title: "Faster, clearer decisions",
-    text: "Reading every answer by hand takes time. Intervexa scores the full interview as soon as you submit it, so the next conversation can start sooner.",
+    title: "A level in seconds",
+    text: "Paste a posting and get Internship through Executive.",
   },
   {
     icon: "card",
-    title: "Same scorecard every time",
-    text: "Each of the 15 roles keeps its own questions and marks. Candidates are only compared with other people on the same role.",
+    title: "Trained on real job ads",
+    text: "The job model learned from LinkedIn postings, not from the interview questions.",
   },
   {
-    icon: "spark",
-    title: "A recommendation you can use",
-    text: "The report says Excellent, Good, Average, or Poor. You also see the strong topics, the gaps, and a short note on what to do next.",
+    icon: "users",
+    title: "A separate interview model",
+    text: "Written answers are turned into word counts, then labeled. That model does not predict job level.",
   },
 ];
 
 export const metadata = {
   title: "Features",
-  description: "Role questions, keyword scoring, a model label, and one shared interview report.",
+  description: "Check a job level, or score a candidate on 15 stored roles.",
 };
 
 export default function FeaturesPage() {
@@ -54,7 +54,7 @@ export default function FeaturesPage() {
     <main>
       <PageIntro
         title="Features"
-        text="Intervexa keeps the interview on one scorecard. The questions, the marks, and the recommendation all come from the role you pick."
+        text="Intervexa checks a job’s experience level, and it scores a candidate on a stored role."
       />
       <section className="pb-8">
         <Container className="grid gap-4 sm:grid-cols-2">
@@ -65,7 +65,7 @@ export default function FeaturesPage() {
       </section>
       <section className="pb-16">
         <Container>
-          <h2 className="text-2xl font-bold text-ink">Why teams use it</h2>
+          <h2 className="text-2xl font-bold text-ink">Why there are two models</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {whyItems.map((item) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title} text={item.text} />

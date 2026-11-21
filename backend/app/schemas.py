@@ -1,6 +1,11 @@
 from pydantic import BaseModel
 
 
+class JobText(BaseModel):
+    title: str
+    description: str
+
+
 class AnswerItem(BaseModel):
     question: str
     answer: str

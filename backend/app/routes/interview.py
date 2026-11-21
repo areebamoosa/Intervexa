@@ -3,10 +3,18 @@ from fastapi.responses import Response
 
 from app.controllers.interview import create_submission, get_questions, get_roles
 from app.db import get_report
+from app.ml.experience import predict_experience
 from app.pdf_report import build_report_pdf
-from app.schemas import CandidateSubmission
+from app.schemas import CandidateSubmission, JobText
 
 router = APIRouter()
+
+
+@router.post("/experience")
+def experience(data: JobText):
+    level = predict_experience(data.title, data.description)
+    return {"title": data.title, "predicted_experience_level": level}
+
 
 @router.get("/roles")
 def roles():
@@ -26,7 +34,7 @@ def submissions(data: CandidateSubmission):
 @router.get("/reports/{report_id}/pdf")
 def download_report(report_id: int):
     report = get_report(report_id)
-    if not report:
+    if report is None:
         raise HTTPException(status_code=404, detail="Report not found")
 
     pdf = build_report_pdf(report)

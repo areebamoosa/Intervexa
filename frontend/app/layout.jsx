@@ -14,7 +14,7 @@ export const metadata = {
     default: "Intervexa",
     template: "%s · Intervexa",
   },
-  description: "Score interview answers against a role scorecard and review strengths, gaps, and a recommendation.",
+  description: "Analyse a job, then score a candidate's interview answers.",
 };
 
 export default function RootLayout({ children }) {

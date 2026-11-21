@@ -6,11 +6,11 @@ import { PersonIcon } from "@/components/ui/Icons";
 const examples = [
   {
     tone: "teal",
-    title: "One candidate might sound confident, but Intervexa flags vague answers and missed skills.",
+    title: "Check a job: a senior engineer posting is predicted as Mid-Senior level.",
   },
   {
     tone: "orange",
-    title: "Another might be less polished, but the scorecard shows clear coverage of the required topics.",
+    title: "Evaluate a candidate: Python Developer loads 10 questions, then scores each answer.",
   },
 ];
 
@@ -35,9 +35,9 @@ export default function Examples() {
           ))}
         </div>
         <p className="mt-6 rounded-2xl bg-white px-6 py-5 text-center text-sm leading-6 text-muted shadow-sm">
-          With one shared scorecard, you make{" "}
-          <span className="font-semibold text-ink">faster, fairer, and more informed hiring decisions</span>{" "}
-          — without guessing.
+          The job tool returns{" "}
+          <span className="font-semibold text-ink">one experience level</span>. The interview tool
+          returns a score, a model label, and a PDF report.
         </p>
       </Container>
     </Section>

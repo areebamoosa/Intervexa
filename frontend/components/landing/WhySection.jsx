@@ -7,18 +7,18 @@ import SectionTitle from "@/components/ui/SectionTitle";
 const whyItems = [
   {
     icon: "clock",
-    title: "Faster, clearer decisions",
-    text: "Reading every answer by hand takes time. Intervexa scores the full interview as soon as you submit it, so the next conversation can start sooner.",
+    title: "A job level in seconds",
+    text: "Paste a title and description. The job model returns Internship, Entry level, Associate, Mid-Senior level, Director, or Executive.",
+  },
+  {
+    icon: "users",
+    title: "A full interview score",
+    text: "Pick one of 15 roles. The candidate answers that role’s 10 questions, then you get strengths, weaknesses, and a PDF.",
   },
   {
     icon: "card",
-    title: "Same scorecard every time",
-    text: "Each of the 15 roles keeps its own questions and marks. A data analyst is never scored on a cloud engineer scorecard, and every candidate on the same role is judged the same way.",
-  },
-  {
-    icon: "spark",
-    title: "A recommendation you can use",
-    text: "The report says Excellent, Good, Average, or Poor. You also see the strong topics, the gaps, and a short note on what to do next.",
+    title: "Each tool has its own model",
+    text: "Job text is scored by the LinkedIn model. Answers are scored by keyword match and the answer model. One model does not do the other’s job.",
   },
 ];
 
@@ -33,9 +33,9 @@ export default function WhySection() {
           ))}
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          <Button href="/candidate">Start evaluation</Button>
+          <Button href="/evaluate">Check a job</Button>
           <Button href="/candidate" variant="secondary">
-            Try for free
+            Evaluate a candidate
           </Button>
         </div>
       </Container>

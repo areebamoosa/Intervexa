@@ -8,10 +8,10 @@ export default function WhatIs() {
   return (
     <Section id="what">
       <Container>
-        <SectionTitle>What Is An AI-Powered Interview Evaluation?</SectionTitle>
+        <SectionTitle>What Does Intervexa Do?</SectionTitle>
         <p className="mx-auto mt-4 max-w-3xl text-center leading-7 text-muted">
-          An AI-powered interview evaluation is a structured way to score candidate answers with one
-          scorecard, so every person is judged on the same skills.
+          Intervexa has two tools. One reads a job posting and predicts its experience level. The other
+          scores a candidate on the questions stored for a job role.
         </p>
         <div className="mt-12 grid items-center gap-8 lg:grid-cols-2">
           <ProductPreview />
@@ -19,12 +19,10 @@ export default function WhatIs() {
             <span className="grid h-14 w-14 place-items-center rounded-2xl bg-white/10">
               <CardIcon className="h-7 w-7" />
             </span>
-            <p className="mt-5 text-base font-semibold leading-7">
-              Intervexa scores each answer against the skills on that question, then adds a model label.
-            </p>
+            <p className="mt-5 text-base font-semibold leading-7">Two separate models, two separate jobs.</p>
             <p className="mt-4 text-sm leading-6 text-white/80">
-              Instead of relying on memory, your team gets a percentage, the strong topics, and the missing
-              ones. The recommendation tells you whether to move forward.
+              Job level comes from real LinkedIn postings. Candidate scores come from 15 roles, 10
+              questions each, plus a model trained on written answers.
             </p>
           </article>
         </div>

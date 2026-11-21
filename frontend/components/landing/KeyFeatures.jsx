@@ -6,23 +6,23 @@ import SectionTitle from "@/components/ui/SectionTitle";
 const features = [
   {
     icon: "list",
-    title: "Role-based questions",
-    text: "Pick a job and Intervexa loads the questions, skills, and marks prepared for that role.",
+    title: "Job title and description",
+    text: "Those two fields are the only input for a job-level check.",
   },
   {
     icon: "card",
-    title: "Keyword scoring",
-    text: "Each answer is checked against the skills for that question, then turned into marks out of the question total.",
-  },
-  {
-    icon: "spark",
-    title: "A second read from the model",
-    text: "A trained model adds a label — Excellent, Good, Average, or Poor — next to the keyword score.",
+    title: "Six experience levels",
+    text: "The job model scored 76.36% on postings it was not trained on.",
   },
   {
     icon: "users",
-    title: "One report for the team",
-    text: "Strengths, missing topics, and a hiring note sit in one place, so reviewers start from the same page.",
+    title: "15 roles, 10 questions",
+    text: "Each stored role opens the same 10 questions every time you evaluate that role.",
+  },
+  {
+    icon: "spark",
+    title: "Score and PDF",
+    text: "Each answer gets a keyword score and a model label. The report can be downloaded.",
   },
 ];
 

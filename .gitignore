@@ -52,3 +52,6 @@ frontend/build/
 backend/.venv/
 backend/__pycache__/
 backend/**/*.pyc
+
+backend/app/datasets/raw/
+backend/app/datasets/processed/

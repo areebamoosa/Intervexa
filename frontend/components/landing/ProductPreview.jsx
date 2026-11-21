@@ -9,32 +9,21 @@ export default function ProductPreview() {
           <span className="h-2.5 w-2.5 rounded-full bg-[#f0b4a8]" />
           <span className="h-2.5 w-2.5 rounded-full bg-[#f3d48a]" />
           <span className="h-2.5 w-2.5 rounded-full bg-[#b7e0c2]" />
-          <span className="ml-2 text-xs text-muted">Evaluation report</span>
+          <span className="ml-2 text-xs text-muted">Intervexa</span>
         </div>
 
-        <div className="grid gap-3 sm:grid-cols-[1.15fr_0.85fr]">
+        <div className="grid gap-3 sm:grid-cols-2">
           <div className="rounded-xl bg-mist p-4">
-            <p className="text-xs font-medium text-muted">Data Analyst</p>
-            <p className="mt-2 text-4xl font-bold text-ink">82%</p>
-            <p className="mt-1 text-sm font-semibold text-teal">Excellent</p>
-            <div className="mt-4 h-2 overflow-hidden rounded-full bg-white">
-              <div className="h-full w-[82%] rounded-full bg-teal" />
-            </div>
-            <div className="mt-4 space-y-2 text-xs text-muted">
-              <p className="rounded-lg bg-white px-3 py-2">SQL · 10 / 10</p>
-              <p className="rounded-lg bg-white px-3 py-2">Metrics · 8 / 10</p>
-            </div>
+            <p className="text-xs font-medium text-muted">Check a job level</p>
+            <p className="mt-2 text-lg font-bold text-ink">Senior Software Engineer</p>
+            <p className="mt-2 text-sm leading-6 text-muted">Lead backend services and mentor engineers.</p>
+            <p className="mt-3 text-sm font-semibold text-teal">Mid-Senior level</p>
           </div>
-          <div className="flex flex-col gap-3">
-            <div className="rounded-xl bg-forest p-4 text-white">
-              <p className="text-xs text-white/70">Recommendation</p>
-              <p className="mt-2 text-sm font-semibold leading-5">Strong candidate. Recommended for the next round.</p>
-            </div>
-            <div className="rounded-xl border border-line bg-white p-4">
-              <p className="text-xs text-muted">Model label</p>
-              <p className="mt-1 text-sm font-semibold text-ink">Good</p>
-              <p className="mt-1 text-xs leading-5 text-muted">Covers the main skill for this question.</p>
-            </div>
+          <div className="rounded-xl bg-forest p-4 text-white">
+            <p className="text-xs text-white/70">Evaluate a candidate</p>
+            <p className="mt-2 text-lg font-bold">Python Developer</p>
+            <p className="mt-2 text-sm leading-6 text-white/80">10 stored questions, then a score and a report.</p>
+            <p className="mt-3 text-sm font-semibold">Score, label, and PDF</p>
           </div>
         </div>
       </div>

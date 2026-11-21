@@ -49,6 +49,8 @@ def grade(percentage):
 
 
 def score_answer(job_role, question_text, answer_text):
+    # The saved model turns the answer into word counts, then predicts a label.
+    # The number score is a separate check: how many question keywords appear.
     label = predict_label(answer_text)
 
     row = None

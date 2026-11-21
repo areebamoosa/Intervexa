@@ -23,8 +23,9 @@ const navItems = [
     label: "Resources",
     children: [
       { href: "/how-it-works", label: "How it works" },
-      { href: "/candidate", label: "Start an evaluation" },
-      { href: "/report", label: "Latest report" },
+      { href: "/dashboard", label: "Dashboard" },
+      { href: "/evaluate", label: "Check a job" },
+      { href: "/candidate", label: "Evaluate a candidate" },
     ],
   },
   { href: "/pricing", label: "Pricing" },
@@ -48,8 +49,8 @@ export default function Navbar() {
           ))}
         </nav>
         <div className="hidden md:block">
-          <Button href="/candidate" size="sm">
-            Start evaluation
+          <Button href="/dashboard" size="sm">
+            Open app
           </Button>
         </div>
         <button
@@ -77,8 +78,8 @@ export default function Navbar() {
             </div>
           ))}
           <div className="pt-3">
-            <Button href="/candidate" size="sm">
-              Start evaluation
+            <Button href="/dashboard" size="sm">
+              Open app
             </Button>
           </div>
         </div>

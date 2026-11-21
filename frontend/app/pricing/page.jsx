@@ -7,18 +7,18 @@ const plans = [
   {
     name: "Practice",
     price: "Free",
-    text: "Score one interview at a time on your own machine.",
-    points: ["All 15 job roles", "Keyword score and model label", "Strengths, gaps, and a recommendation"],
+    text: "Check one job posting at a time on your own machine.",
+    points: ["Job title and description", "One predicted experience level", "The tuned model saved in the backend"],
     cta: "Try for free",
-    href: "/candidate",
+    href: "/evaluate",
     highlighted: false,
   },
   {
     name: "Hiring desk",
     price: "Free",
-    text: "Keep the same evaluator ready for the next candidate.",
-    points: ["Unlimited local evaluations", "The same questions for every candidate", "A report you can review with the team"],
-    cta: "Start evaluation",
+    text: "Score a candidate on one of the 15 stored roles.",
+    points: ["Name, email, and a job role", "10 questions for that role", "A score, a model label, and a PDF"],
+    cta: "Evaluate a candidate",
     href: "/candidate",
     highlighted: true,
   },
@@ -26,7 +26,7 @@ const plans = [
 
 export const metadata = {
   title: "Pricing",
-  description: "Intervexa runs locally. Start an evaluation whenever you need one.",
+  description: "Intervexa runs locally. Check a job level or evaluate a candidate.",
 };
 
 export default function PricingPage() {
@@ -34,7 +34,7 @@ export default function PricingPage() {
     <main>
       <PageIntro
         title="Pricing"
-        text="Intervexa runs on your computer with your backend. There is no paid plan. Start an evaluation whenever the next candidate is ready."
+        text="Intervexa runs on your computer. Check a job level, or evaluate a candidate on a stored role. There is no paid plan."
       />
       <section className="pb-20">
         <Container className="grid gap-4 md:grid-cols-2">

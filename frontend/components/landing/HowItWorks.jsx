@@ -6,13 +6,13 @@ import Section from "@/components/ui/Section";
 const howCards = [
   {
     icon: "spark",
-    title: "Answers scored against the role",
-    text: "After you pick a job, Intervexa loads that role’s questions. Each answer is checked for the skill on the scorecard, whether that is SQL, cloud networking, mobile screens, or system design.",
+    title: "Check a job level",
+    text: "Paste the title and description. The saved job model turns that text into word weights and returns one experience level.",
   },
   {
-    icon: "card",
-    title: "Tailored to the question marks",
-    text: "Every question has its own total. The report adds those marks into a percentage, lists strengths and gaps, and keeps the model label beside each answer.",
+    icon: "users",
+    title: "Evaluate a candidate",
+    text: "Enter the candidate, pick a role, and answer its 10 questions. Keywords set the score. The answer model adds Excellent, Good, Average, or Poor.",
   },
 ];
 

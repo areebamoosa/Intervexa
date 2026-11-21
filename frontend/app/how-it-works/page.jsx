@@ -4,34 +4,34 @@ import Container from "@/components/ui/Container";
 
 const steps = [
   {
-    title: "Add the candidate",
-    text: "Enter a name and email. They show at the top of the finished report.",
+    title: "Paste the job title",
+    text: "For a job-level check, use the title from the posting, such as Senior Software Engineer.",
   },
   {
-    title: "Choose a role",
-    text: "Each of the 15 roles loads its own questions, skills, and marks.",
+    title: "Paste the description",
+    text: "The job model reads the title and description together and returns one experience level.",
   },
   {
-    title: "Enter the answers",
-    text: "Type what the candidate said. Each question is scored on its own skill.",
+    title: "Pick a stored role",
+    text: "For a candidate, enter their name and email, then choose one of the 15 roles.",
   },
   {
-    title: "Read the report",
-    text: "See the percentage, strengths, missing topics, a model label, and a recommendation.",
+    title: "Score the 10 answers",
+    text: "That role’s questions are scored with keywords and the answer model, then saved as a PDF.",
   },
 ];
 
 export const metadata = {
   title: "How it works",
-  description: "Add a candidate, pick a role, enter the answers, and read the scorecard report.",
+  description: "Check a job level, or score a candidate on one of 15 roles.",
 };
 
 export default function HowItWorksPage() {
   return (
     <main>
       <PageIntro
-        title="How an evaluation works"
-        text="Four steps. One scorecard. The same rules for every candidate on that role."
+        title="How Intervexa works"
+        text="One path checks a job level. The other path evaluates a candidate on a stored role."
       />
       <section className="pb-16">
         <Container className="grid items-start gap-8 lg:grid-cols-[1.2fr_0.8fr]">

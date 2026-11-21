@@ -13,14 +13,13 @@ export default function Hero() {
             <span className="mt-1 block text-ink">By Intervexa</span>
           </h1>
           <p className="mt-5 max-w-xl text-base leading-7 text-muted">
-            Let Intervexa score interview answers against the role scorecard. Pick from 15 roles, from
-            software engineering to data, cloud, security, and design. Each one has its own questions,
-            marks, strengths, gaps, and a recommendation.
+            Check the experience level of a job posting, or evaluate a candidate on one of 15 roles.
+            Each role has 10 stored questions and a scored report.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="/candidate">Start evaluation</Button>
-            <Button href="/how-it-works" variant="secondary">
-              See how it works
+            <Button href="/evaluate">Check a job</Button>
+            <Button href="/candidate" variant="secondary">
+              Evaluate a candidate
             </Button>
           </div>
         </div>
@@ -28,7 +27,7 @@ export default function Hero() {
           <div className="mb-4 flex justify-end">
             <span className="inline-flex items-center gap-2 rounded-full bg-orange px-4 py-2 text-sm font-semibold text-white shadow-sm">
               <span className="grid h-4 w-4 place-items-center rounded-full border border-white text-[10px]">✓</span>
-              15 roles included
+              Job levels and interviews
             </span>
           </div>
           <ProductPreview />

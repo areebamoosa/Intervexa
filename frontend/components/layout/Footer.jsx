@@ -9,35 +9,22 @@ const footerColumns = [
       { href: "/features", label: "Features" },
       { href: "/how-it-works", label: "How it works" },
       { href: "/pricing", label: "Pricing" },
-      { href: "/candidate", label: "Start evaluation" },
+      { href: "/evaluate", label: "Check a job" },
+      { href: "/candidate", label: "Evaluate a candidate" },
     ],
   },
   {
-    title: "Roles",
+    title: "Job level",
     links: [
-      { href: "/role", label: "Python Developer" },
-      { href: "/role", label: "Frontend Developer" },
-      { href: "/role", label: "Backend Developer" },
-      { href: "/role", label: "Full Stack Developer" },
-      { href: "/role", label: "Mobile App Developer" },
-      { href: "/role", label: "Junior Software Engineer" },
-      { href: "/role", label: "Senior Software Engineer" },
-      { href: "/role", label: "Lead Software Engineer" },
-      { href: "/role", label: "Data Analyst" },
-      { href: "/role", label: "Machine Learning Engineer" },
-      { href: "/role", label: "Android Developer" },
-      { href: "/role", label: "UI/UX Designer" },
-      { href: "/role", label: "Cloud Engineer" },
-      { href: "/role", label: "Cybersecurity Engineer" },
-      { href: "/role", label: "Data Engineer" },
+      { href: "/evaluate", label: "Title and description" },
+      { href: "/evaluate", label: "Six experience levels" },
     ],
   },
   {
-    title: "Evaluate",
+    title: "Interview",
     links: [
       { href: "/candidate", label: "Candidate details" },
-      { href: "/interview", label: "Interview answers" },
-      { href: "/report", label: "Score report" },
+      { href: "/role", label: "15 job roles" },
     ],
   },
   {
@@ -57,11 +44,14 @@ export default function Footer() {
         <div>
           <Logo />
           <p className="mt-4 max-w-xs text-sm leading-6 text-muted">
-            Score interview answers against one role scorecard. Strengths, gaps, and a recommendation in one report.
+            Check a job’s experience level, or score a candidate on 15 stored roles.
           </p>
-          <div className="mt-5">
-            <Button href="/candidate" size="sm">
-              Start evaluation
+          <div className="mt-5 flex flex-wrap gap-2">
+            <Button href="/evaluate" size="sm">
+              Check a job
+            </Button>
+            <Button href="/candidate" size="sm" variant="secondary">
+              Evaluate
             </Button>
           </div>
         </div>
